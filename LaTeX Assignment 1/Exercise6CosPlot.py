@@ -3,7 +3,7 @@ import numpy as np
 
 #Creating the x values and y values of cos(x) functions 
 xValues = np.arange(-np.pi,np.pi,0.1)
-yValues = np.cos(x)
+yValues = np.cos(xValues)
 
 #Setting the plot's size to 10x10 inches 
 plt.figure(figsize=(10,10))

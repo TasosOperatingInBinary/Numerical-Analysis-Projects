@@ -3,8 +3,8 @@ import numpy as np
 
 #Creating the x values and y values of sin(x) and cos(x) functions 
 xValues = np.arange(-np.pi,np.pi,0.1)
-sinValues = np.sin(x)
-cosValues = np.cos(x)
+sinValues = np.sin(xValues)
+cosValues = np.cos(xValues)
 
 #Setting the plot's size to 10x10 inches 
 plt.figure(figsize=(10,10))
