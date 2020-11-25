@@ -40,3 +40,4 @@ plt.legend(["Cos(Θ)","Sin(Θ)"],loc='upper left',fontsize="xx-large")
 #Plotting the two functions
 plt.plot(xValues,cosValues)
 plt.plot(xValues,sinValues)
+plt.show()

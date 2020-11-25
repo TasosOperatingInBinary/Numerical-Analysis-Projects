@@ -28,3 +28,4 @@ plt.title("Plot of cos(Θ)",fontsize="xx-large")
 
 #Plotting the two functions
 plt.plot(xValues,yValues)
+plt.show()
