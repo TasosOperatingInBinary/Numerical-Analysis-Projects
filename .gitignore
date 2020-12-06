@@ -6,3 +6,5 @@
 *.json
 *.rar
 */.idea/*
+*/__pycache__/*
+*.toc

@@ -1,0 +1,51 @@
+\documentclass{article}
+
+\usepackage[LGR, T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[greek]{babel}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subfiles}
+\usepackage{graphicx}
+\usepackage{subfig}
+\graphicspath{ {./data/} }
+
+
+\title{1η Εργασία Στο Μάθημα Της Αριθμητικής Ανάλυσης}
+\doublespacing
+\author{ Ονοματεπώνυμο : Παπαδόπουλος Αναστάσιος \\
+            ΑΕΜ : 3654 \\
+            Διδάσκων : Τέφας Αναστάσιος }
+
+\begin{document}
+\normalsize
+\maketitle
+\vspace{15px}
+\begin{center}
+    \includegraphics[scale=0.25]{intro_page_logo.png}
+\end{center}
+\begin{figure}[b]
+    \begin{center}
+        \includegraphics[scale=0.15]{csd_logo.png}    
+    \end{center}
+\end{figure}
+\newpage
+\doublespacing
+\tableofcontents
+\newpage
+
+\subfile{intro.tex}
+\subfile{./Exercise1/exercise1.tex}
+\subfile{./Exercise1/bisection.tex}
+\subfile{./Exercise1/newton_raphson.tex}
+\subfile{./Exercise1/secant.tex}
+\subfile{./Exercise1/newton_converge.tex}
+\subfile{./Exercise1/iterations_comparison.tex}
+
+\section{ Άσκηση 2 }
+%\section{ Άσκηση 3 }
+%\section{ Άσκηση 4 }
+
+\end{document}

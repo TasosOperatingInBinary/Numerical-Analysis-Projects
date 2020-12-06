@@ -1,0 +1,105 @@
+\documentclass[First Project.tex]{subfiles}
+\begin{document}
+
+\subsection{Υπολογισμός σύγκλισης της μεθόδου \textlatin{\textbf{Newton-Raphson}} \\ για κάθε ρίζα}
+    Για την μέθοδο \textlatin{\textbf{Newton-Raphson}} ζητείται επίσης να δειχθεί για ποιες ρίζες συγκλίνει τετραγωνικά και για ποιες όχι.
+    Αρχικά αναφέρουμε τις τρεις ρίζες της συνάρτησης \textlatin{\textbf{f(x)}} με ακρίβεια 5ου ψηφίου.
+    \vspace{10mm}
+    \begin{figure}[h!]
+        \centering
+        \captionsetup{justification=centering}
+        \begin{center}
+            \begin{tabular}{ |c| }       
+                \hline
+                \textbf{$x_{0}$ = -1.19762} \\ \hline
+                \textbf{$x_{1}$ = 1.53013} \\ \hline
+                \textbf{$x_{2}$ = 0.00000} \\ 
+                \hline
+            \end{tabular}
+            \caption{Ρίζες της συνάρτησης \textlatin{f(x)} στο διάστημα [-2,2]}
+        \end{center}
+    \end{figure}
+    Στην συνέχεια αναφέρουμε το θεώρημα που θα χρησιμοποιηθεί για τον υπολογισμό της τάξης σύγκλισης της κάθε ρίζας.
+    \large{\textbf{Θεώρημα : }} \normalsize Έστω ότι 
+    \( x_{n} \neq x^{*} \)
+    για κάθε φυσικό αριθμό \textlatin{n}, όπου $x^{*}$ σταθερό σημείο της συνάρτησης {\textbf{φ(\textlatin{x})}} που χρησιμοποιείται στην μέθοδο σταθερού 
+    σημείου, και έστω ότι ισχύει :
+    \begin{equation*}
+        \lim_{n\to\infty} \frac{x_{n+1} - x^{*}}{(x_{n} - x^{*})^{p}} = a \neq  0 ,     
+    \end{equation*}
+    τότε η τάξη σύγκλισης της ακολουθίας $x_{n}$ είναι ακριβώς \textlatin{\textbf{p}}. \\ Πιο συγκεκριμένα για την μέθοδο 
+    \textlatin{\textbf{Newton-Raphson}} χρησιμοποιώντας το θεώρημα \textlatin{\textbf{Taylor}} με κέντρο το σημείο \textlatin{\textbf{$x^{*}$}},
+    όπου \textlatin{\textbf{$x^{*}$}} ρίζα της \textlatin{\textbf{f(x)}}, αποδεικνύεται ότι για την αναδρομική ακολουθία της μεθόδου 
+    \textlatin{\textbf{Newton-Raphson}} το προηγούμενο όριο ισούται για \textlatin{\textbf{$p=2$}} με :
+    \begin{equation*}
+       \frac{f''(x^{*})}{2f'(x^{*})} \neq 0 ,
+    \end{equation*}
+    εφόσον \( f'(x^{*}) \neq 0\). \\
+    Με αυτά που αναφέρθηκαν πλέον μπορούμε να προχωρήσουμε στον υπολογισμό της σύγκλισης της μεθόδου \textlatin{\textbf{Newton-Raphson}} για
+    κάθε μία από τις τρεις ρίζες. \\ 
+    
+    Υπολογίζουμε αρχικά την πρώτη και την δεύτερη παράγωγο της \textlatin{\textbf{f(x)}} στο διάστημα \textbf{[-2.2]}:
+    \begin{gather*}
+            f'(x) = 3e^{sin^{3}x}*sin^{2}x*cosx + 6x^{5} - 8x^{3} -3x^{2} \\
+            f''(x) = 9e^{sin^{3}x}*sin^{4}x*cos^{2}x + 3e^{sin^{3}x}*sin(2x)*cosx-3e^{sin^{3}x}*sin^{3}x + 30x^{4} - 24x^{2} - 6x            
+    \end{gather*}
+    
+    \vspace{10mm}
+    \begin{itemize}
+        \item \textbf{$x_{0}$ = -1.19762} \\
+            Ισχύει 
+            \begin{equation*}
+                f'( -1.19762 ) = 35.62888 \neq 0 ,
+            \end{equation*}   
+            επομένως μπορούμε να χρησιμοποιήσουμε τον προηγούμενο τύπο για την σύγκλιση της μεθόδου \textlatin{\textbf{Newton-Raphson}} για 
+            την ρίζα \textlatin{\textbf{$x_{0}$}}. Οπότε έχουμε
+            \begin{equation*}
+                \lim_{n\to\infty} \frac{x_{n+1} - x_{0}}{(x_{n} - x_{0})^{2}} = \frac{f''(x_{0})}{2f'(x_{0})} = \frac{35.62888}{-2 * 4.92044} = -3.62049 \neq 0
+            \end{equation*}
+            επομένως η μέθοδος \textlatin{\textbf{Newton-Raphson}} συγκλίνει τετραγωνικά για την ρίζα \textbf{$x_{0}$ = -1.19762}.
+        
+        \item \textbf{$x_{1}$ = 1.53013} \\
+            Ισχύει 
+            \begin{equation*}
+                f'( 1.53013 ) = 14.97241 \neq 0 ,
+            \end{equation*}   
+            επομένως μπορούμε να χρησιμοποιήσουμε τον προηγούμενο τύπο για την σύγκλιση της μεθόδου \textlatin{\textbf{Newton-Raphson}} για 
+            την ρίζα \textlatin{\textbf{$x_{1}$}}. Οπότε έχουμε
+            \begin{equation*}
+                \lim_{n\to\infty} \frac{x_{n+1} - x_{1}}{(x_{n} - x_{1})^{2}} = \frac{f''(x_{1})}{2f'(x_{1})} = \frac{91.03090}{2 * 14.97241} = 3.03995 \neq 0
+            \end{equation*}
+            επομένως η μέθοδος \textlatin{\textbf{Newton-Raphson}} συγκλίνει τετραγωνικά για την ρίζα \textbf{$x_{1}$ = 1.53013}.
+        \item \textbf{$x_{2}$ = 0.00000} \\
+            Ισχύει 
+            \begin{equation*}
+                f'( 0.00000 ) = 0.00000= 0 ,
+            \end{equation*}   
+            επομένως δεν μπορούμε να χρησιμοποιήσουμε τον προηγούμενο τύπο για την σύγκλιση της μεθόδου \textlatin{\textbf{Newton-Raphson}} για 
+            την ρίζα \textlatin{\textbf{$x_{2}$}}. Αν υπολογίσουμε και την δεύτερη και τρίτη παράγωγο της \textlatin{\textbf{f(x)}} παρατηρούμε ότι
+            κι αυτές έχουν ρίζα το \textbf{$x_{2}$ = 0.00000}, επομένως η ρίζα \textbf{$x_{2}$} έχει πολλαπλότητα \textbf{$m$ = 4}. Χρησιμοποιώντας το 
+            ακόλουθο θεώρημα 
+            
+            \large{\textbf{Θεώρημα : }} \normalsize Έστω μία συνάρτηση \textlatin{\textbf{f(x)}} $( m+1 )$ φορές συνεχώς παραγωγίσιμη στο διάστημα \textlatin{\textbf{[a,b]}} κι
+            έστω ότι η συνάρτηση έχει ως ρίζα το σημείο \textbf{\textlatin{$x$ = r}} με πολλαπλότητα \textbf{$m$}, τότε η μέθοδος \textlatin{\textbf{Newton-Raphson}}
+            συγκλίνει τοπικά στο σημείο \textbf{\textlatin{$x$ = r}} και το σφάλμα \textbf{\textlatin{$e_{i}$}} στην \textlatin{\textbf{i}}-οστή  
+            επανάληψη ικανοποιεί το παρακάτω 
+            \begin{equation*}
+                \lim_{n\to\infty} \frac{e_{i+1}}{x_{i}} = S,     
+            \end{equation*}
+            όπου
+            \begin{equation*}
+                S = \frac{m-1}{m}.
+            \end{equation*}
+
+            Χρησιμοποιώντας το παραπάνω θεώρημα έχουμε \(S = \frac {3}{4}\) οπότε η μέθοδος \textlatin{\textbf{Newton-Raphson}} συγκλίνει γραμμικά
+            με \(e_{i+1} \approx \frac{3}{4} * e_{i}\). 
+            Αν η πολλαπλότητα μιας ρίζας \textlatin{\textbf{r}} είναι γνωστή από πριν μπορούμε να βελτιώσουμε την απόδοση της κλασσικής μεθόδου \textlatin{\textbf{Newton-Raphson}}
+            με μία μικρή τροποποίηση :
+            \begin{equation*}
+                x_{n+1} = x_{n} - \frac{\textbf{\textlatin{$m * f(x_{n})$}}} { \textbf{\textlatin{$f'(x_{n})$}} }
+            \end{equation*}
+            όπου αποδεικνύεται ότι συγκλίνει τετραγωνικά στην ρίζα \textlatin{\textbf{r}}. Μία τέτοια συνάρτηση έχει υλοποιηθεί στο αρχείο \textit{\textlatin{\textbf{mult\_newton\_raphson.py}}}
+            με όνομα \textit{\textlatin{\textbf{mult\_newton\_raphson}}}, όπου έχει προστεθεί ένα ακόμα όρισμα \textlatin{\textbf{m}} που δηλώνει
+            την πολλαπλότητα της ρίζας που θέλουμε να υπολογιστεί από την συνάρτηση.
+    \end{itemize}
+\end{document}
