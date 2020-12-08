@@ -13,7 +13,7 @@
 χρειάζεται για ακρίβεια \textbf{5} δεκαδικών ψηφίων. H συνάρτηση επιστρέφει την ρίζα της \textlatin{\textbf{f(x)}} στο διάστημα 
 \textlatin{\textbf{(a,b)}} και τον αριθμό των επαναλήψεων που χρειάστηκαν για να βρέθει η ρίζα με σφάλμα λιγότερο από \textlatin{\textbf{eps}}.
 \vspace{5px}
-\begin{figure}[hp]
+\begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
     \begin{center}
@@ -23,8 +23,8 @@
 \end{figure}
 
 Μετά την κλήση της συνάρτησης \textit{\textlatin{\textbf{bisection}}} τα αποτελέσματα είναι τα εξής:
-\vspace{5px}
-\begin{figure}[hp]
+%\vspace{5px}
+\begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
     \begin{center}
@@ -33,14 +33,15 @@
     \end{center}
 \end{figure}
 
+
 Ώπου παρατηρούμε ότι η ρίζα της \textlatin{\textbf{f(x)}} στο διάστημα \textlatin{\textbf{[-1.5,-1.0]}} με ακρίβεια 5 δεκαδικών ψηφίων 
-είναι η \textbf{-1.19762} καθώς και ότι η μέθοδος της διχοτόμησης χρειάστηκε \textbf{17} επαναλήψεις για να επιτύχει την επιθυμητή ακρίβεια.
+είναι η \textbf{-1.1976} καθώς και ότι η μέθοδος της διχοτόμησης χρειάστηκε \textbf{17} επαναλήψεις για να επιτύχει την επιθυμητή ακρίβεια.
 Στην συνέχεια παρατηρούμε στο \textit{Σχήμα 1} ότι η \textlatin{\textbf{f(x)}} έχει μία ακόμα ρίζα στο διάστημα \textlatin{\textbf{[1.25,1.75]}}.
 Πέρα από την γραφική παράσταση, με παρόμοιο τρόπο χρησιμοποιώντας το θεώρημα \textlatin{\textbf{Bolzano}} μπορούμε να αποδείξουμε ότι η
 \textlatin{\textbf{f(x)}} όντως έχει μία τουλάχιστον ρίζα στο διάστημα \textlatin{\textbf{[1.25,1.75]}}. Επομένως καλούμε πάλι την συνάρτηση
 \textit{\textlatin{\textbf{bisection}}} αυτή την φορά όμως με ορίσματα \textlatin{\textbf{f(x), a = 1.25, b = 1.75 }}.
 \vspace{5px}
-\begin{figure}[hp]
+\begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
     \begin{center}
@@ -50,7 +51,7 @@
 \end{figure}
 
 Από την οποία παίρνουμε τα εξής αποτελέσματα:
-\begin{figure}[hp]
+\begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
     \begin{center}
@@ -60,7 +61,7 @@
 \end{figure}
 
 Ώπου παρατηρούμε ότι η ρίζα της \textlatin{\textbf{f(x)}} στο διάστημα \textlatin{\textbf{[1.25,1.75]}} με ακρίβεια 5 δεκαδικών ψηφίων 
-είναι η \textbf{1.53013} καθώς και ότι η μέθοδος της διχοτόμησης χρειάστηκε \textbf{17} επαναλήψεις για να επιτύχει την επιθυμητή ακρίβεια. 
+είναι η \textbf{1.5301} καθώς και ότι η μέθοδος της διχοτόμησης χρειάστηκε \textbf{17} επαναλήψεις για να επιτύχει την επιθυμητή ακρίβεια. 
 Τέλος, μπορούμε εύκολα να αποδείξουμε ότι η τρίτη και τελευταία ρίζα της \textlatin{\textbf{f(x)}} είναι το \textbf{0} καθώς 
 \textlatin{\textbf{f(0) = 0}}. Στην περίπτωση μας όμως δεν υπάρχει κανένα διάστημα που ταυτόχρονα να περίεχει το \textbf{0} και το θεώρημα
 \textlatin{\textbf{Bolzano}} να εγγυάται την ύπαρξη τουλάχιστον μιας ρίζας καθώς δεν υπάρχουν \textbf{\textlatin{x1,x2}} με 

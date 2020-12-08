@@ -11,9 +11,9 @@
         \begin{center}
             \begin{tabular}{ |c| }       
                 \hline
-                \textbf{$x_{0}$ = -1.19762} \\ \hline
-                \textbf{$x_{1}$ = 1.53013} \\ \hline
-                \textbf{$x_{2}$ = 0.00000} \\ 
+                \textbf{$x_{0}$ = -1.1976} \\ \hline
+                \textbf{$x_{1}$ = 1.5301} \\ \hline
+                \textbf{$x_{2}$ = 0.0000} \\ 
                 \hline
             \end{tabular}
             \caption{Ρίζες της συνάρτησης \textlatin{f(x)} στο διάστημα [-2,2]}
@@ -46,37 +46,37 @@
     
     \vspace{10mm}
     \begin{itemize}
-        \item \textbf{$x_{0}$ = -1.19762} \\
+        \item \textbf{$x_{0}$ = -1.1976} \\
             Ισχύει 
             \begin{equation*}
-                f'( -1.19762 ) = 35.62888 \neq 0 ,
+                f'( -1.1976 ) \approx 35.62888 \neq 0 ,
             \end{equation*}   
             επομένως μπορούμε να χρησιμοποιήσουμε τον προηγούμενο τύπο για την σύγκλιση της μεθόδου \textlatin{\textbf{Newton-Raphson}} για 
             την ρίζα \textlatin{\textbf{$x_{0}$}}. Οπότε έχουμε
             \begin{equation*}
                 \lim_{n\to\infty} \frac{x_{n+1} - x_{0}}{(x_{n} - x_{0})^{2}} = \frac{f''(x_{0})}{2f'(x_{0})} = \frac{35.62888}{-2 * 4.92044} = -3.62049 \neq 0
             \end{equation*}
-            επομένως η μέθοδος \textlatin{\textbf{Newton-Raphson}} συγκλίνει τετραγωνικά για την ρίζα \textbf{$x_{0}$ = -1.19762}.
+            επομένως η μέθοδος \textlatin{\textbf{Newton-Raphson}} συγκλίνει τετραγωνικά για την ρίζα \textbf{$x_{0}$ = -1.1976}.
         
-        \item \textbf{$x_{1}$ = 1.53013} \\
+        \item \textbf{$x_{1}$ = 1.5301} \\
             Ισχύει 
             \begin{equation*}
-                f'( 1.53013 ) = 14.97241 \neq 0 ,
+                f'( 1.5301 ) \approx 14.97241 \neq 0 ,
             \end{equation*}   
             επομένως μπορούμε να χρησιμοποιήσουμε τον προηγούμενο τύπο για την σύγκλιση της μεθόδου \textlatin{\textbf{Newton-Raphson}} για 
             την ρίζα \textlatin{\textbf{$x_{1}$}}. Οπότε έχουμε
             \begin{equation*}
                 \lim_{n\to\infty} \frac{x_{n+1} - x_{1}}{(x_{n} - x_{1})^{2}} = \frac{f''(x_{1})}{2f'(x_{1})} = \frac{91.03090}{2 * 14.97241} = 3.03995 \neq 0
             \end{equation*}
-            επομένως η μέθοδος \textlatin{\textbf{Newton-Raphson}} συγκλίνει τετραγωνικά για την ρίζα \textbf{$x_{1}$ = 1.53013}.
-        \item \textbf{$x_{2}$ = 0.00000} \\
+            επομένως η μέθοδος \textlatin{\textbf{Newton-Raphson}} συγκλίνει τετραγωνικά για την ρίζα \textbf{$x_{1}$ = 1.5301}.
+        \item \textbf{$x_{2}$ = 0.0000} \\
             Ισχύει 
             \begin{equation*}
-                f'( 0.00000 ) = 0.00000= 0 ,
+                f'( 0.0000 ) = 0.0000 = 0 ,
             \end{equation*}   
             επομένως δεν μπορούμε να χρησιμοποιήσουμε τον προηγούμενο τύπο για την σύγκλιση της μεθόδου \textlatin{\textbf{Newton-Raphson}} για 
             την ρίζα \textlatin{\textbf{$x_{2}$}}. Αν υπολογίσουμε και την δεύτερη και τρίτη παράγωγο της \textlatin{\textbf{f(x)}} παρατηρούμε ότι
-            κι αυτές έχουν ρίζα το \textbf{$x_{2}$ = 0.00000}, επομένως η ρίζα \textbf{$x_{2}$} έχει πολλαπλότητα \textbf{$m$ = 4}. Χρησιμοποιώντας το 
+            κι αυτές έχουν ρίζα το \textbf{$x_{2}$ = 0.0000}, επομένως η ρίζα \textbf{$x_{2}$} έχει πολλαπλότητα \textbf{$m$ = 4}. Χρησιμοποιώντας το 
             ακόλουθο θεώρημα 
             
             \large{\textbf{Θεώρημα : }} \normalsize Έστω μία συνάρτηση \textlatin{\textbf{f(x)}} $( m+1 )$ φορές συνεχώς παραγωγίσιμη στο διάστημα \textlatin{\textbf{[a,b]}} κι

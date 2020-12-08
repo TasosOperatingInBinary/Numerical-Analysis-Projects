@@ -16,7 +16,7 @@ def secant(f, x0, x1, eps=5e-6, max_iterations=50):
             The function to find a root of.
         x0 : float
             The first point for secant method.
-        x1: float
+        x1 : float
             The second point for secant method.
         eps : float
             The target accuracy.

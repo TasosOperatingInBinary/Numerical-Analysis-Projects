@@ -45,7 +45,6 @@ def bisection(f, a, b, eps=5e-6):
     iterations_num = ceil((np.log(b - a) - np.log(eps)) / np.log(2))
 
     # Bisection algorithm
-    current_root = (a + b) / 2  # first root approximation is the middle of the interval [a,b]
     for i in range(0, iterations_num):
         current_root = (a + b) / 2  # each iteration root approximation is the middle of the current interval
         if f(a) * f(

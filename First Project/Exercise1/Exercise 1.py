@@ -1,21 +1,21 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from newton_raphson import newton_raphson
-from bisection import bisection
-from secant import secant
-from mult_newton_raphson import mult_newton_raphson
-from iterations_comparison import bisection_iterations, newton_iterations, secant_iterations
+from Exercise1.newton_raphson import newton_raphson
+from Exercise1.bisection import bisection
+from Exercise1.secant import secant
+from Exercise1.mult_newton_raphson import mult_newton_raphson
+from Exercise1.iterations_comparison import bisection_iterations, newton_iterations, secant_iterations
 
 
 def g(x):
-    return np.sin(x) + (x ** 2) * np.cos(x) - x ** 2 - x
-    # return np.e ** ((np.sin(x)) ** 3) + x ** 6 - 2 * (x ** 4) - x ** 3 - 1
+    # return np.sin(x) + (x ** 2) * np.cos(x) - x ** 2 - x
+    return np.e ** ((np.sin(x)) ** 3) + x ** 6 - 2 * (x ** 4) - x ** 3 - 1
 
 
 def gprime(x):
-    return np.cos(x) + 2 * x * np.cos(x) + (x ** 2) * (-np.sin(x)) - 2 * x - 1
-    # return 3 * (np.e ** ((np.sin(x)) ** 3)) * ((np.sin(x)) ** 2) * np.cos(x) + 6 * (x ** 5) - 8 * (x ** 3) - 3 * (
-    #        x ** 2)
+    # return np.cos(x) + 2 * x * np.cos(x) + (x ** 2) * (-np.sin(x)) - 2 * x - 1
+    return 3 * (np.e ** ((np.sin(x)) ** 3)) * ((np.sin(x)) ** 2) * np.cos(x) + 6 * (x ** 5) - 8 * (x ** 3) - 3 * (
+           x ** 2)
 
 
 def g_second_der(x):
@@ -28,6 +28,12 @@ def g_second_der(x):
 
 
 def main():
+
+    root, iterations_num = secant(g, 1.3, 1.9)
+
+    print("Root = " + '{:.4f}'.format(root))
+    print("Iterations = " + str(iterations_num))
+
     """
     x_values = np.arange(-2.0, 2.0, 0.001)
     y_values = g(x_values)
@@ -98,9 +104,9 @@ def main():
     print()
     print(iterations)
     print("number of roots : " + str(len(roots)))
-    """
+    
 
-    roots, iterations, num_of_calls = bisection_iterations()
+    #roots, iterations, num_of_calls = bisection_iterations()
     # roots, iterations, num_of_calls = newton_iterations()
     # roots, iterations, num_of_calls = secant_iterations()
     if np.nan in roots: print("found nan")
@@ -139,6 +145,6 @@ def main():
     plt.ylabel('Frequency', fontsize='xx-large')
     plt.title('Bisection iterations for root ='+str(roots[0])+'\n function calls = ' + str(num_of_calls), fontsize='xx-large')
     plt.show()
-
+    """
 
 main()
