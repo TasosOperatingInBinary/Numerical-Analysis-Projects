@@ -146,5 +146,5 @@ def main():
     plt.title('Bisection iterations for root ='+str(roots[0])+'\n function calls = ' + str(num_of_calls), fontsize='xx-large')
     plt.show()
     """
-
+    # TODO REPLACE >= WITH JUST > IN EPS CONDITION ON ALL IFS
 main()
