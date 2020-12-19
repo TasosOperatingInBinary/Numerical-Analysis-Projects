@@ -1,3 +1,6 @@
+from math import sqrt
+
+
 def matrix_mult(a, b):
     """
         Function that multiplies two matrices a and b
@@ -85,3 +88,11 @@ def equal_matrices(matrix1, matrix2):
                 return False
 
     return True
+
+
+def vector_magnitude(vector):
+    magnitude = 0
+    for i in range(len(vector)):
+        magnitude += vector[i]*vector[i]
+
+    return sqrt(magnitude)

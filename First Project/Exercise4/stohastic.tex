@@ -1,0 +1,30 @@
+\documentclass[First Project.tex]{subfiles}
+
+\begin{document}
+\subsection{ Απόδειξη Στοχαστικότητας πίνακα \textlatin{G}  }
+
+Σε αυτήν την παράγραφο αποδεικνύεται αναλυτικά ότι ο πίνακας \textlatin{G} είναι στοχαστικός. 
+Για να είναι ο πίνακας \textlatin{G} στοχαστικός πρέπει τα στοιχεία κάθε στήλης του να αθροίζουν στο 1. Τα στοιχεία του \textlatin{G} 
+προκύπτουν από το παρακάτω 
+\begin{equation*}
+    G_{(i,j)} = \frac{q}{n} + \frac{A_{(j,i)}(1-q)}{n_{j}}, 
+\end{equation*}
+όπου
+\begin{equation*}
+    n_{j} = \sum_{i=1}^{n} A_{j,i}
+\end{equation*}
+
+Λαμβάνοντας υπόψιν τα παραπάνω θα πρέπει για κάθε στήλη $j$ του πίνακα \textlatin{G} να ισχύει 
+\begin{equation*}
+    \sum_{i=1}^{n} \frac{q}{n} + \frac{A_{(j,i)}(1-q)}{n_{j}} = 1
+\end{equation*}
+
+Οπότε
+\begin{gather*}
+    \sum_{i=1}^{n} \frac{q}{n} + \frac{A_{(j,i)}(1-q)}{n_{j}} = \sum_{i=1}^{n} \frac{q}{n} + \sum_{i=1}^{n} \frac{A_{(j,i)}(1-q)}{n_{j}} \\
+    = \frac{q}{n} \sum_{i=1}^{n} 1 + \frac{1-q}{n_{j}} \sum_{i=1}^{n} A_{(j,i)} = \frac{q}{n} n +  \frac{1-q}{\sum_{i=1}^{n} A_{(j,i)}} \sum_{i=1}^{n} A_{(j,i)} \\
+    = q + 1 - q = 1
+\end{gather*}
+
+όπου αποδεικνύεται ότι ο πίνακας \textlatin{G} είναι στοχαστικός αφού το άθροισμα κάθε στήλης $j$ κάνει 1.
+\end{document}
