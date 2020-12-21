@@ -1,4 +1,3 @@
-# TODO ask about converge properties
 def modified_secant(f, x0, x1, x2, eps=5e-6, max_iterations=50):
     """
     Function that finds a root using a modified Secant (or Inverse quadratic interpolation ) method for a given function
@@ -57,7 +56,7 @@ def modified_secant(f, x0, x1, x2, eps=5e-6, max_iterations=50):
     x_n_1 = x1
     x_n_2 = x2
 
-    # Secant method algorithm
+    # Modified Secant method algorithm
     # iterate while the error is larger that predefined argument eps or we have more iterations to do until
     # max_iterations
     while abs(x_n_3 - x_n_2) >= eps and iterations_num < max_iterations:

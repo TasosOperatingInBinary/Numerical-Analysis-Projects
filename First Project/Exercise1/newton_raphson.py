@@ -1,5 +1,3 @@
-# TODO check x0s that are roots of fprime -> slow converge
-# TODO ADD DESCRIPTION IN .TEX FOR WHEN METHOD DOES NOT CONVERGE FROM THE PAPERS IN CHROME BOOKMARKS
 def newton_raphson(f, fprime, x0, eps=5e-6, max_iterations=50):
     """
         Function that finds a root using Newton's iteration for a given function f(x) with known derivative f'(x).

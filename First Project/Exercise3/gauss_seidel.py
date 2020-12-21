@@ -15,6 +15,7 @@ def gauss_seidel(a, b, eps=5e-5):
             The right hand side vector
         eps : float
             The target accuracy
+            Default value is 5e-5
 
         Returns
         -------

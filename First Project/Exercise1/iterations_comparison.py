@@ -4,20 +4,8 @@ from Exercise1.newton_raphson import newton_raphson
 from Exercise1.secant import secant
 
 """
-def g(x):
-    # return np.sin(x) +(x**2)*np.cos(x) - x**2 -x
-    return np.e ** ((np.sin(x)) ** 3) + x ** 6 - 2 * (x ** 4) - x ** 3 - 1
-
-
-def g_second_der(x):
-    h = 0.001
-    return (gprime(x + h) - gprime(x)) / h
-
-
-def gprime(x):
-    # return np.cos(x) +2*x*np.cos(x) +(x**2)*(-np.sin(x)) -2*x -1
-    return 3 * (np.e ** ((np.sin(x)) ** 3)) * ((np.sin(x)) ** 2) * np.cos(x) + 6 * (x ** 5) - 8 * (x ** 3) - 3 * (
-            x ** 2)
+    This file is used for comparison between the three method Bisection,Newton-Raphson and secant for finding roots
+    of a function.
 """
 
 

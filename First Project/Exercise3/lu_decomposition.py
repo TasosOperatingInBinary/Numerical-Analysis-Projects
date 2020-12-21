@@ -70,7 +70,7 @@ def lu(a, b):
     pb = matrix_vector_mult(p, b)
     # create the c vector
     c = [0.0 for i in range(len(l))]
-    for row in range(len(l)): # TODO MAKE FUNCTION FOR SOLVING TRIANGULAR SYSTEMS
+    for row in range(len(l)):
         previous_variables_sum = 0
         for column in range(row):
             previous_variables_sum += l[row][column]*c[column]

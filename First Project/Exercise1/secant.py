@@ -1,4 +1,3 @@
-
 def secant(f, x0, x1, eps=5e-6, max_iterations=50):
     """
     Function that finds a root using Secant method for a given function f(x). The function finds the root of f(x)

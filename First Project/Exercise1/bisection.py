@@ -47,7 +47,9 @@ def bisection(f, a, b, eps=5e-6):
     # Bisection algorithm
     for i in range(0, iterations_num):
         current_root = (a + b) / 2  # each iteration root approximation is the middle of the current interval
-        if f(a) * f(
+        if f(current_root) == 0:
+            return current_root, i+1
+        elif f(a) * f(
                 current_root) < 0:  # find out where Bolzano theorem still can be applied and update the interval [a,b]
             b = current_root
         else:

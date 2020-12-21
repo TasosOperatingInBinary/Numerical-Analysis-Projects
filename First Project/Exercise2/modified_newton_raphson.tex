@@ -3,12 +3,9 @@
 
 \subsection{ Τροποποιημένη μέθοδος \textlatin{Newton-Raphson} }
 
-Στην τροποποιημένη μέθοδο \textlatin{Newton-Raphson} αλλάζει ο αναδρομικός τύπος της ακολουθίας για την εκτίμηση της ρίζας, ενώ οι 
-προϋποθέσεις της μεθόδου παραμένουν ίδιες. Η συνάρτηση \textit{\textlatin{\textbf{modified\_newton\_raphson}}} από το αρχείο 
-\textit{\textlatin{\textbf{modified\_newton\_raphson.py}}} δέχεται τα ίδια ορίσματα με την κλασσική μέθοδο \textlatin{Newton-Raphson}.
-%\begin{equation*}
-%    \textlatin{f($x_{0}$)} * \textbf{\textlatin{$f''(x_{0})$}} > \textbf{0}
-%\end{equation*}
+Στην τροποποιημένη μέθοδο \textlatin{Newton-Raphson} αλλάζει ο αναδρομικός τύπος της ακολουθίας για την εκτίμηση της ρίζας. Η συνάρτηση 
+\textit{\textlatin{\textbf{modified\_newton\_raphson}}} από το αρχείο \textit{\textlatin{\textbf{modified\_newton\_raphson.py}}} δέχεται τα 
+ίδια ορίσματα με την κλασσική μέθοδο \textlatin{Newton-Raphson}.
 \begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
@@ -39,8 +36,8 @@
     \end{center}
 \end{figure}
 
-Ώπου παρατηρούμε ότι η ρίζα της \textlatin{\textbf{f(x)}} στο διάστημα \textbf{[0.5,1.0]} με ακρίβεια 5 δεκαδικών ψηφίων 
-είναι η \textbf{0.84107} καθώς και ότι η τροποποιημένη μέθοδος \textlatin{\textbf{Newton-Raphson}} χρειάστηκε \textbf{5} επαναλήψεις για να επιτύχει την 
+Όπου παρατηρούμε ότι η ρίζα της \textlatin{\textbf{f(x)}} στο διάστημα \textbf{[0.5,1.0]} με ακρίβεια 5 δεκαδικών ψηφίων 
+είναι η \textbf{0.84107} (εμφάνιση με στρογγυλοποίηση στο 5ο δεκαδικό) καθώς και ότι η τροποποιημένη μέθοδος \textlatin{\textbf{Newton-Raphson}} χρειάστηκε \textbf{5} επαναλήψεις για να επιτύχει την 
 επιθυμητή ακρίβεια. Για την ρίζα της συνάρτησης στο διάστημα \textbf{[2.0,2.5]} επιλέγουμε \textlatin{\textbf{ $x_{0}$ = 2.5}} όπου τηρούνται 
 όλες οι προϋποθέσεις για την μέθοδο \textlatin{\textbf{Newton-Raphson}}. 
 \begin{figure}[h!]
@@ -51,7 +48,9 @@
         \caption{Παράδειγμα κλήσης της συνάρτησης \textit{\textlatin{\textbf{modified\_newton\_raphson}}}.}
     \end{center}
 \end{figure}
+
 Μετά την κλήση της συνάρτησης έχουμε τα παρακάτω αποτελέσματα :
+
 \begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
@@ -62,13 +61,13 @@
     \end{center}
 \end{figure}
 
-Ώπου παρατηρούμε ότι η ρίζα της \textlatin{\textbf{f(x)}} στο διάστημα \textbf{[2.0,2.5]} με ακρίβεια 5 δεκαδικών ψηφίων 
+Όπου παρατηρούμε ότι η ρίζα της \textlatin{\textbf{f(x)}} στο διάστημα \textbf{[2.0,2.5]} με ακρίβεια 5 δεκαδικών ψηφίων 
 είναι η \textbf{2.3005} καθώς και ότι η τροποποιημένη μέθοδος \textlatin{\textbf{Newton-Raphson}} χρειάστηκε \textbf{3} επαναλήψεις για να επιτύχει την 
 επιθυμητή ακρίβεια. Τέλος, για την ρίζα της \textlatin{\textbf{f(x)}} στο διάστημα \textbf{[1.0,1.25]} αν υπολογίσουμε τις τιμές της πρώτης
 και δεύτερης παραγώγου θα δούμε ότι μηδενίζονται και αυτές. Επομένως, η ρίζα αυτή έχει πολλαπλότητα \textlatin{\textbf{m = 3}} και δεν
 τηρούνται όλες οι προϋποθέσεις για την μέθοδο \textlatin{\textbf{Newton-Raphson}} και είτε δεν θα έχουμε καθόλου σύγκλιση είτε 
 σύγκλιση αλλά όχι με την επιθυμητή ακρίβεια. Για παράδειγμα, αν δοκίμασουμε να καλέσουμε την συνάρτηση με αρχικό σημείο το 
-\textlatin{\textbf{ $x_{0}$ = 1.04}} ( ένα σημείο αρκετά κοντά στην ρίζα ) :
+\textlatin{\textbf{ $x_{0}$ = 1.04}} ( ένα σημείο αρκετά κοντά στην ρίζα ) 
 \begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
@@ -78,6 +77,5 @@
                 \textlatin{\textbf{$x_{0}$ = 1.04}}}.
     \end{center}
 \end{figure}
-
-Ώπου παρατηρούμε ότι δεν έχουμε την επιθυμητή ακρίβεια.
+παρατηρούμε στο \textit{Σχήμα 33} ότι δεν έχουμε την επιθυμητή ακρίβεια ( εμφάνιση με στρογγυλοποίηση στο 5ο δεκαδικό).
 \end{document}

@@ -53,7 +53,6 @@ def vector_inf_norm(vector):
 
 
 def sub_vector(vector1, vector2):
-    # TODO check that vector1 and vector2 have the same length
     new_vector = []
     for i in range(len(vector1)):
         new_vector.append(vector1[i] - vector2[i])
@@ -61,7 +60,6 @@ def sub_vector(vector1, vector2):
 
 
 def vector_mult(vector1, vector2):
-    # TODO check that vector1 and vector2 can be multiplied
     new_matrix = []
     for i in range(len(vector1)):
         new_matrix.append([0 for i in range(len(vector2))])

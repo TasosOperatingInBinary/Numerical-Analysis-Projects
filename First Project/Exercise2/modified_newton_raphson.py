@@ -1,4 +1,3 @@
-# TODO ADD DESCRIPTION IN .TEX FOR WHEN METHOD DOES NOT CONVERGE FROM THE PAPERS IN CHROME BOOKMARKS
 def modified_newton_raphson(f, fprime, f_second_der, x0, eps=5e-6, max_iterations=50):
     """
         Function that finds a root using a modified Newton's iteration for a given function f(x) with known derivative

@@ -84,7 +84,7 @@
             συγκλίνει τοπικά στο σημείο \textbf{\textlatin{$x$ = r}} και το σφάλμα \textbf{\textlatin{$e_{i}$}} στην \textlatin{\textbf{i}}-οστή  
             επανάληψη ικανοποιεί το παρακάτω 
             \begin{equation*}
-                \lim_{n\to\infty} \frac{e_{i+1}}{x_{i}} = S,     
+                \lim_{i\to\infty} \frac{e_{i+1}}{e_{i}} = S,     
             \end{equation*}
             όπου
             \begin{equation*}
@@ -92,7 +92,7 @@
             \end{equation*}
 
             Χρησιμοποιώντας το παραπάνω θεώρημα έχουμε \(S = \frac {3}{4}\) οπότε η μέθοδος \textlatin{\textbf{Newton-Raphson}} συγκλίνει γραμμικά
-            με \(e_{i+1} \approx \frac{3}{4} * e_{i}\). 
+            με \(e_{i+1} \approx \frac{3}{4} * e_{i}\). Επομένως η μέθοδος \textlatin{\textbf{Newton-Raphson}} δεν συγκλίνει τετραγωνικά λόγω της πολλαπλότητας της ρίζας.
             Αν η πολλαπλότητα μιας ρίζας \textlatin{\textbf{r}} είναι γνωστή από πριν μπορούμε να βελτιώσουμε την απόδοση της κλασσικής μεθόδου \textlatin{\textbf{Newton-Raphson}}
             με μία μικρή τροποποίηση :
             \begin{equation*}
