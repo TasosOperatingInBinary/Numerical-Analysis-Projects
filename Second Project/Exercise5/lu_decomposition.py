@@ -84,13 +84,4 @@ def lu(a, b):
             previous_variables_sum += u[row][column]*x[column]
         x[row] = (c[row] - previous_variables_sum) / u[row][row]
 
-    print("p :")
-    print_matrix(p)
-    print("a :")
-    print_matrix(a)
-    print("l :")
-    print_matrix(l)
-    print("u :")
-    print_matrix(u)
-
     return x

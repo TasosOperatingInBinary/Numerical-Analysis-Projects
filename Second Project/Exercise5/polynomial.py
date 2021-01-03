@@ -77,10 +77,10 @@ def custom_sin(value):
         float
             The approximation value of the sin curve at point x.
     """
-    x = [0.0, 0.65, 1.3, 1.9500000000000002, 2.6, 3.25, 3.9000000000000004, 4.55, 5.2, 5.8500000000000005]
+    x = [0.0, 0.65, 1.3, 1.9500000000000002, 2.6, 3.25, 3.9000000000000004, 4.55, 5.2, 2*np.pi]
     y = [0.0, 0.6051864057, 0.9635581854, 0.9289597150, 0.5155013718, -0.1081951345, -0.6877661591, -0.9868438585,
-         -0.8834546557, -0.4197640178]
+         -0.8834546557, 0]
     c = polynomial_interpolation(x, y)
-    x1 = value % (2 * np.pi)
+    value = value % (2 * np.pi)
 
-    return calculate_polynomial(len(x) - 1, x, c, x1)
+    return calculate_polynomial(len(x) - 1, x, c, value)
