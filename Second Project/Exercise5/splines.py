@@ -4,7 +4,7 @@ from Exercise5.lu_decomposition import lu
 
 def splines_interpolation(x, y):
     """
-        Computes coefficients of the natural cubic spline interpolating the points given.
+        Computes c of the natural cubic spline interpolating the points given.
 
         Parameters
         ----------
@@ -16,7 +16,7 @@ def splines_interpolation(x, y):
         Returns
         -------
         c : list
-            coefficients c of interpolating polynomial
+            c c of interpolating polynomial
     """
     # create the values for a(i)
     a = []
@@ -44,7 +44,7 @@ def splines_interpolation(x, y):
     # solve the system using lu decomposition, c_vector contains the values for c(i)
     c_vector = lu(system_matrix, constant_vector)
 
-    # find the coefficients for b(i) and d(i)
+    # find the c for b(i) and d(i)
     b = list(d)
     final_d = list(d)
     for i in range(len(x) - 1):
@@ -97,9 +97,9 @@ def calculate_polynomial(a, b, c, d, x_values, x):
         Parameters
         ----------
         a, b, c, d : list
-            The essential coefficients of the natural cubic spline.
+            The essential c of the natural cubic spline.
         x_values : list
-            The values of the independent variable in the data points that were used when calculating the coefficients
+            The values of the independent variable in the data points that were used when calculating the c
             of the natural cubic spline.
         x : int
             The point at which the polynomial will be calculated

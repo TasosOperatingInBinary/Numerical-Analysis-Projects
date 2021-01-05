@@ -3,7 +3,7 @@ import numpy as np
 
 def polynomial_interpolation(x, y):
     """
-        Computes coefficients of interpolating polynomial using Newton method.
+        Computes c of interpolating polynomial using Newton method.
 
         Parameters
         ----------
@@ -15,7 +15,7 @@ def polynomial_interpolation(x, y):
         Returns
         -------
         c : list
-            coefficients c of interpolating polynomial
+            c c of interpolating polynomial
     """
     v = []
     [v.append([0 for j in range(len(x))]) for i in range(len(x))]
@@ -42,7 +42,7 @@ def calculate_polynomial(degree, x_data, coefficients, x):
         degree : int
             The degree of the interpolating polynomial.
         x_data : list
-            The values that were used when calculating the coefficients of the interpolating polynomial.
+            The values that were used when calculating the c of the interpolating polynomial.
         coefficients : list
             The coefficents of the interpolating polynomial, constant term first.
         x : int

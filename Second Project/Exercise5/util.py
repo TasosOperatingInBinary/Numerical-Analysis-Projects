@@ -70,12 +70,12 @@ def vector_mult(vector1, vector2):
 
 def transpose(matrix):
     transposed_matrix = []
-    [transposed_matrix.append(list(matrix[i])) for i in range(len(matrix))]
-
-    for row in range(len(matrix)):
-        for column in range(len(matrix)):
-            transposed_matrix[column][row] = matrix[row][column]
-
+    [transposed_matrix.append([0.0 for i in range(len(matrix))]) for j in range(len(matrix[0]))]
+    for column_index in range(len(matrix[0])):
+        temp_list = []
+        for row_index in range(len(matrix)):
+            temp_list.append(matrix[row_index][column_index])
+        transposed_matrix[column_index] = temp_list
     return transposed_matrix
 
 
