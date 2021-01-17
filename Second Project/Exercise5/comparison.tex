@@ -45,7 +45,28 @@
         με πολυώνυμο 10ου βαθμού.}
     \end{center}
 \end{figure}
-Από τα ιστογράμματα των \textit{Σχημάτων 2} και \textit{3} παρατηρούμε ότι οι μέθοδοι \textlatin{Newton} 
+\vspace{5mm}
+\begin{figure}[h!]
+    \centering
+    \captionsetup{justification=centering}
+    \subfloat{{\includegraphics[scale=0.20]{error_function_newton.png}}}
+    \quad
+    \subfloat{{\includegraphics[scale=0.20]{error_function_splines.png} }}
+    \caption{ Γραφική παράσταση του σφάλματος προσέγγισης για 200 σημεία στο [-π, π] για τις 
+    μεθόδους \textlatin{\textbf{Newton}} και \textlatin{\textbf{Splines}}.}
+\end{figure}
+\vspace{5px}
+\begin{figure}[h!]
+    \centering
+    \captionsetup{justification=centering}
+    \begin{center}
+        \includegraphics[scale=0.20]{error_function_least_squares.png}    
+        \caption{ Γραφική παράσταση του σφάλματος προσέγγισης για 200 σημεία στο [-π, π] για την μέθοδο των ελαχίστων τετραγώνων 
+        με πολυώνυμο 10ου βαθμού.}
+    \end{center}
+\end{figure}
+Από τα ιστογράμματα των \textit{Σχημάτων 2} και \textit{3} και των γραφικών παραστάσεων των \textit{Σχημάτων 4} και 
+\textit{5} παρατηρούμε ότι οι μέθοδοι \textlatin{Newton} 
 και ελαχίστων τετραγώνων προσεγγίζουν το ημίτονο με το σφάλμα να κυμαίνεται από $-0.00009$ εώς και $0.00009$, ενώ οι
 φυσικές κυβικές \textlatin{Splines} προσεγγίζουν το ημίτονο με το σφάλμα να κυμαίνεται από $-0.004$ έως $0.004$.
 Το μέγιστο σφάλμα που κάνει η μέθοδος \textlatin{Newton} είναι $9.727780525789487e-05$ ενώ το ελάχιστο

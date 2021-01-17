@@ -5,12 +5,13 @@ from Exercise5.lu_decomposition import lu
 
 def least_squares_fit(x, y, degree=10):
     """
-        Computes the coefficients of the 5th degree polynomial of the least squares fit. <br>Constant term first.</br>
+        Computes the coefficients of the <b>degree</b> degree polynomial of the least squares fit. <br>Constant term
+        first.</br>
 
         Parameters
         ----------
         x : list
-            The values of the independent variable. <b>Must be sorted.</b>
+            The values of the independent variable.
         y : list
             The values of f(x) for every x, where x is the independent variable
         degree : int
@@ -19,7 +20,7 @@ def least_squares_fit(x, y, degree=10):
         Returns
         -------
         c : list
-            c c of interpolating polynomial
+            coefficients of interpolating polynomial
     """
     # construct A
     a = []
@@ -37,12 +38,12 @@ def least_squares_fit(x, y, degree=10):
 
 def calculate_polynomial(c, x, degree=10):
     """
-        Computes the value of the 5th degree least squares fit polynomial.
+        Computes the value of the <b>degree</b> degree least squares fit polynomial.
 
         Parameters
         ----------
         c : list
-            The coefficients of the 5th degree polynomial. <b>Constant term first.</br>
+            The coefficients of the <b>degree</b> degree polynomial. <b>Constant term first.</br>
         x : int
             The point at which the polynomial will be calculated
         degree : int
@@ -61,7 +62,7 @@ def calculate_polynomial(c, x, degree=10):
 
 def custom_sin(value, d=10):
     """
-        Approximates sin curve with least squares using 5th degree polynomial model.
+        Approximates sin curve with least squares using <b>d</b> degree polynomial model.
 
         Parameters
         ----------

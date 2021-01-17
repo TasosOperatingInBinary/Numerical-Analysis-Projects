@@ -75,6 +75,21 @@ def main():
             print("newton false assumption of correct digits")
             print(value)
             break
+
+    # error figure for newton method
+    plt.figure(figsize=(10, 10))
+    plt.grid(True, which='both')
+    plt.xlim([min(x_values) - 0.1, max(x_values) + 0.1])
+    plt.ylim([-0.00001, 0.0001])
+    plt.xlabel("x", fontsize="xx-large")
+    plt.ylabel("Error", fontsize="xx-large")
+    plt.title("Error of Newton method for 200 points on [-π,π]", fontsize="xx-large")
+    plt.axhline(y=0, color='k')
+    plt.axvline(x=0, color='k')
+    plt.legend(["Error Function"], loc='upper left', fontsize="xx-large")
+    plt.plot(x_values, error)
+    plt.show()
+
     print("newton max error = " + str(max(error)))
     print("newton min error = " + str(min(error)))
     for i in range(len(error)):
@@ -106,6 +121,19 @@ def main():
             print("splines false assumption of correct digits")
             print(value)
             break
+    # error figure for splines method
+    plt.figure(figsize=(10, 10))
+    plt.grid(True, which='both')
+    plt.xlim([min(x_values) - 0.1, max(x_values) + 0.1])
+    plt.ylim([-0.0001, 0.0045])
+    plt.xlabel("x", fontsize="xx-large")
+    plt.ylabel("Error", fontsize="xx-large")
+    plt.title("Error of Splines method for 200 points on [-π,π]", fontsize="xx-large")
+    plt.axhline(y=0, color='k')
+    plt.axvline(x=0, color='k')
+    plt.legend(["Error Function"], loc='upper left', fontsize="xx-large")
+    plt.plot(x_values, error)
+    plt.show()
     print("splines max error = " + str(max(error)))
     print("splines min error = " + str(min(error)))
     multiplier = 1000
@@ -138,6 +166,19 @@ def main():
             print("least squares false assumption of correct digits")
             print(value)
             break
+    # error figure for least squares method
+    plt.figure(figsize=(10, 10))
+    plt.grid(True, which='both')
+    plt.xlim([min(x_values) - 0.1, max(x_values) + 0.1])
+    plt.ylim([-0.00001, 0.0001])
+    plt.xlabel("x", fontsize="xx-large")
+    plt.ylabel("Error", fontsize="xx-large")
+    plt.title("Error of Least Squares method for 200 points on [-π,π]", fontsize="xx-large")
+    plt.axhline(y=0, color='k')
+    plt.axvline(x=0, color='k')
+    plt.legend(["Error Function"], loc='upper left', fontsize="xx-large")
+    plt.plot(x_values, error)
+    plt.show()
     print("least squares max error = " + str(max(error)))
     print("least squares min error = " + str(min(error)))
     multiplier = 100000

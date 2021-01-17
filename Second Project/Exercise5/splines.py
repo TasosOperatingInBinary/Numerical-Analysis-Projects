@@ -16,7 +16,7 @@ def splines_interpolation(x, y):
         Returns
         -------
         c : list
-            c c of interpolating polynomial
+           coefficients of interpolating polynomial
     """
     # create the values for a(i)
     a = []

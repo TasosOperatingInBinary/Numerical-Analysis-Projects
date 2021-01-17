@@ -15,7 +15,7 @@ def polynomial_interpolation(x, y):
         Returns
         -------
         c : list
-            c c of interpolating polynomial
+            coefficients of interpolating polynomial
     """
     v = []
     [v.append([0 for j in range(len(x))]) for i in range(len(x))]
@@ -44,7 +44,7 @@ def calculate_polynomial(degree, x_data, coefficients, x):
         x_data : list
             The values that were used when calculating the c of the interpolating polynomial.
         coefficients : list
-            The coefficents of the interpolating polynomial, constant term first.
+            The coefficients of the interpolating polynomial, constant term first.
         x : int
             The point at which the polynomial will be calculated
 
